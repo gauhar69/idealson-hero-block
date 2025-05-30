@@ -1,0 +1,73 @@
+{
+  "version": "0.4",
+  "title": "IdealSon Premium Hero Block",
+  "type": "section",
+  "author": "IdealSon",
+  "thumbnail": "",
+  "date": "2025-03-22",
+  "tags": [
+    "hero",
+    "slider",
+    "premium",
+    "idealson"
+  ],
+  "template_id": 0,
+  "content": [
+    {
+      "id": "4a8c2d1e",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "gap": "no",
+        "height": "min-height",
+        "min_height": {
+          "unit": "vh",
+          "size": 100,
+          "sizes": []
+        },
+        "custom_height": {
+          "unit": "px",
+          "size": 400,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "content_position": "center",
+        "overflow": "hidden",
+        "background_background": "classic",
+        "background_color": "#325a55",
+        "custom_css": ".elementor-section {\n  position: relative;\n  font-family: 'Manrope', sans-serif;\n}\n\n.idealson-hero-slider {\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  min-height: 600px;\n  overflow: hidden;\n}\n\n.idealson-slide {\n  display: none;\n  width: 100%;\n  height: 100%;\n  padding: 32px;\n}\n\n.idealson-slide.active {\n  display: flex;\n  align-items: center;\n}\n\n.idealson-slide-content {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n\n.idealson-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 48px;\n  align-items: center;\n  height: 100%;\n}\n\n@media (max-width: 768px) {\n  .idealson-grid {\n    grid-template-columns: 1fr;\n    gap: 24px;\n    text-align: center;\n  }\n  \n  .idealson-slide {\n    padding: 16px;\n  }\n}"
+      },
+      "elements": [
+        {
+          "id": "7b9d3e2f",
+          "settings": {
+            "content_width": "full",
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "1f4a6b8c",
+              "settings": {
+                "html": "<div class=\"idealson-hero-slider\">\n  <!-- Slide 1: Somnium Pillows -->\n  <div class=\"idealson-slide active\" data-slide=\"1\" style=\"background: linear-gradient(135deg, #325a55 0%, #2a4a45 100%);\">\n    <div class=\"idealson-slide-content\">\n      <div class=\"idealson-grid\">\n        <div class=\"idealson-image-col\">\n          <div class=\"idealson-product-placeholder\">\n            <span>Заменить на реальное фото товара</span>\n          </div>\n        </div>\n        <div class=\"idealson-text-col\">\n          <h2 class=\"idealson-title\">Просыпайся и сияй с Somnium!</h2>\n          <p class=\"idealson-description\">Глубокий сон — лёгкое утро. Попробуй заботу и комфорт!</p>\n          <a href=\"#pillows\" class=\"idealson-btn btn-primary\">Узнать больше о подушках</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <!-- Slide 2: Natural Beauty -->\n  <div class=\"idealson-slide\" data-slide=\"2\" style=\"background: linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%);\">\n    <div class=\"idealson-slide-content\">\n      <div class=\"idealson-grid\">\n        <div class=\"idealson-image-col\">\n          <div class=\"idealson-product-placeholder light\">\n            <span>Заменить на реальное фото товара</span>\n          </div>\n        </div>\n        <div class=\"idealson-text-col\">\n          <h2 class=\"idealson-title dark\">Естественная красота — твой выбор</h2>\n          <p class=\"idealson-description dark\">Коллаген работает изнутри: кожа сияет, волосы крепче, ногти не ломаются</p>\n          <a href=\"#collagen\" class=\"idealson-btn btn-primary\">Выбрать вкус</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <!-- Slide 3: Pillow Quiz -->\n  <div class=\"idealson-slide\" data-slide=\"3\" style=\"background: linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%);\">\n    <div class=\"idealson-slide-content\">\n      <div class=\"idealson-grid\">\n        <div class=\"idealson-image-col\">\n          <div class=\"idealson-product-placeholder light\">\n            <span>Заменить на реальное фото товара</span>\n          </div>\n        </div>\n        <div class=\"idealson-text-col\">\n          <h2 class=\"idealson-title dark\">Не знаете, какую подушку выбрать?</h2>\n          <p class=\"idealson-description dark\">Пройдите короткий тест и получите персональную рекомендацию</p>\n          <a href=\"#quiz-block\" class=\"idealson-btn btn-primary\">Пройти тест</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <!-- Slide 4: Weekly Promotion (Global Widget) -->\n  <div class=\"idealson-slide\" data-slide=\"4\" style=\"background: linear-gradient(135deg, #aec958 0%, #9bb247 100%);\">\n    <div class=\"idealson-slide-content\">\n      <div class=\"idealson-grid\">\n        <div class=\"idealson-image-col\">\n          <div class=\"idealson-product-placeholder\">\n            <span>Заменить на реальное фото товара</span>\n          </div>\n        </div>\n        <div class=\"idealson-text-col\">\n          <h2 class=\"idealson-title\">Акция недели</h2>\n          <p class=\"idealson-description idealson-promo-text\">Магний B6 в подарок: При покупке 1 кг банки натурального коллагена — МАГНИЙ B6 В ПОДАРОК</p>\n          <div class=\"idealson-promo-date\">Только с 28 мая по 1 июня</div>\n          <a href=\"https://wa.me/79999999999\" class=\"idealson-btn btn-outline idealson-promo-button\">Магний B6 в подарок</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <!-- Navigation -->\n  <div class=\"idealson-navigation\">\n    <button class=\"idealson-nav-btn prev\" onclick=\"idealsonPrevSlide()\" aria-label=\"Предыдущий слайд\">←</button>\n    <div class=\"idealson-dots\">\n      <button class=\"idealson-dot active\" onclick=\"idealsonGoToSlide(0)\" aria-label=\"Слайд 1\"></button>\n      <button class=\"idealson-dot\" onclick=\"idealsonGoToSlide(1)\" aria-label=\"Слайд 2\"></button>\n      <button class=\"idealson-dot\" onclick=\"idealsonGoToSlide(2)\" aria-label=\"Слайд 3\"></button>\n      <button class=\"idealson-dot\" onclick=\"idealsonGoToSlide(3)\" aria-label=\"Слайд 4\"></button>\n    </div>\n    <button class=\"idealson-nav-btn next\" onclick=\"idealsonNextSlide()\" aria-label=\"Следующий слайд\">→</button>\n  </div>\n  \n  <!-- Slide Counter -->\n  <div class=\"idealson-counter\">\n    <span id=\"idealson-current\">01</span> / <span id=\"idealson-total\">04</span>\n  </div>\n</div>\n\n<script>\nlet idealsonCurrentSlide = 0;\nconst idealsonSlides = document.querySelectorAll('.idealson-slide');\nconst idealsonDots = document.querySelectorAll('.idealson-dot');\nconst idealsonCounter = document.getElementById('idealson-current');\n\nfunction idealsonShowSlide(index) {\n  // Hide all slides\n  idealsonSlides.forEach(slide => slide.classList.remove('active'));\n  idealsonDots.forEach(dot => dot.classList.remove('active'));\n  \n  // Show current slide\n  idealsonSlides[index].classList.add('active');\n  idealsonDots[index].classList.add('active');\n  \n  // Update counter\n  idealsonCounter.textContent = String(index + 1).padStart(2, '0');\n}\n\nfunction idealsonNextSlide() {\n  idealsonCurrentSlide = (idealsonCurrentSlide + 1) % idealsonSlides.length;\n  idealsonShowSlide(idealsonCurrentSlide);\n}\n\nfunction idealsonPrevSlide() {\n  idealsonCurrentSlide = (idealsonCurrentSlide - 1 + idealsonSlides.length) % idealsonSlides.length;\n  idealsonShowSlide(idealsonCurrentSlide);\n}\n\nfunction idealsonGoToSlide(index) {\n  idealsonCurrentSlide = index;\n  idealsonShowSlide(idealsonCurrentSlide);\n}\n\n// Auto-play slider\nsetInterval(idealsonNextSlide, 5000);\n</script>",
+                "_element_id": "idealson-hero-slider"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "html",
+              "elType": "widget"
+            }
+          ],
+          "isInner": false,
+          "elType": "column"
+        }
+      ],
+      "isInner": false,
+      "elType": "section"
+    }
+  ]
+}
