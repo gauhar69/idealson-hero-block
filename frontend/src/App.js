@@ -107,7 +107,7 @@ function App() {
       nextSlide();
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isTransitioning]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
