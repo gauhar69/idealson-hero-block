@@ -105,11 +105,29 @@ function App() {
   }, [currentSlide]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [isTransitioning]);
+    if (!isPaused && !isTransitioning) {
+      autoPlayRef.current = setInterval(() => {
+        nextSlide();
+      }, 6000);
+    }
+    
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, [isPaused, isTransitioning]);
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e) => {
