@@ -106,9 +106,16 @@ function App() {
 
   useEffect(() => {
     if (!isPaused && !isTransitioning) {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
       autoPlayRef.current = setInterval(() => {
         nextSlide();
       }, 6000);
+    } else {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
     }
     
     return () => {
@@ -116,7 +123,7 @@ function App() {
         clearInterval(autoPlayRef.current);
       }
     };
-  }, [isPaused, isTransitioning]);
+  }, [isPaused, isTransitioning, currentSlide]);
 
   const handleMouseEnter = () => {
     setIsPaused(true);
