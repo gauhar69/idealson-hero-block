@@ -153,6 +153,8 @@ function App() {
       <section 
         className="premium-hero-slider-section"
         ref={sliderRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{
           '--mouse-x': mousePosition.x,
           '--mouse-y': mousePosition.y
