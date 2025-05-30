@@ -6,7 +6,9 @@ function App() {
   const [selectedOffer, setSelectedOffer] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isPaused, setIsPaused] = useState(false);
   const sliderRef = useRef(null);
+  const autoPlayRef = useRef(null);
 
   const offers = [
     {
