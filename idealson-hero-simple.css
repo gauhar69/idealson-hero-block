@@ -1,0 +1,605 @@
+/*
+===========================================
+IDEALSON SIMPLE HERO BLOCK - БЕЗ ACF
+===========================================
+Версия: 1.0 Simple
+Дата: 22.03.2025
+Особенности: Работает без ACF плагина
+
+ПРОСТАЯ УСТАНОВКА:
+1. Скопируйте этот CSS в Внешний вид > Дополнительный CSS
+2. Импортируйте idealson-hero-simple.json в Elementor
+3. Готово! Никаких дополнительных настроек не требуется
+*/
+
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+
+/* CSS Variables */
+:root {
+  --idealson-primary: #325a55;
+  --idealson-secondary: #f7f7f7;
+  --idealson-accent: #aec958;
+  --idealson-white: #ffffff;
+  --idealson-text-dark: #2d2d2d;
+  
+  --idealson-font: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --idealson-radius: 12px;
+  --idealson-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --idealson-shadow: 0 8px 32px rgba(50, 90, 85, 0.1);
+  --idealson-shadow-hover: 0 12px 48px rgba(50, 90, 85, 0.2);
+}
+
+/* ===========================================
+   ПРОСТОЙ HERO БЛОК
+=========================================== */
+
+.idealson-simple-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  font-family: var(--idealson-font);
+  background: var(--idealson-primary);
+}
+
+/* Простые частицы */
+.idealson-particles-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle-simple {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: simpleFloat 4s infinite ease-in-out;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes simpleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-30px);
+    opacity: 0.5;
+  }
+}
+
+/* Слайды */
+.idealson-simple-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  opacity: 0;
+  transform: translateX(50px) scale(0.98);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.idealson-simple-slide.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  z-index: 10;
+}
+
+/* Сетка */
+.idealson-simple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Изображения */
+.idealson-image-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.idealson-card-simple {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  transition: transform var(--idealson-transition);
+}
+
+.idealson-card-simple:hover {
+  transform: scale(1.05) rotateY(5deg);
+}
+
+.idealson-placeholder-simple {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: var(--idealson-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-align: center;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: var(--idealson-transition);
+  overflow: hidden;
+}
+
+.idealson-placeholder-simple:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.idealson-placeholder-simple.light {
+  background: rgba(50, 90, 85, 0.1);
+  border-color: rgba(50, 90, 85, 0.3);
+  color: var(--idealson-primary);
+}
+
+.idealson-placeholder-simple.light:hover {
+  background: rgba(50, 90, 85, 0.15);
+  border-color: rgba(50, 90, 85, 0.5);
+}
+
+.idealson-icon-simple {
+  font-size: 48px;
+  animation: simplePulse 2s ease-in-out infinite;
+}
+
+@keyframes simplePulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 1; 
+  }
+}
+
+.idealson-text-simple {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Контент */
+.idealson-content-simple {
+  padding: 32px;
+  animation: simpleSlideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes simpleSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовки */
+.idealson-title-simple {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--idealson-white);
+  font-family: var(--idealson-font);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.idealson-title-simple::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--idealson-accent) 0%, transparent 100%);
+  border-radius: 2px;
+  animation: simpleUnderline 0.8s ease-out 0.6s both;
+}
+
+@keyframes simpleUnderline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+.idealson-title-simple.dark {
+  color: var(--idealson-text-dark);
+  background: linear-gradient(135deg, var(--idealson-primary) 0%, var(--idealson-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Описания */
+.idealson-desc-simple {
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  font-family: var(--idealson-font);
+}
+
+.idealson-desc-simple.dark {
+  color: rgba(45, 45, 45, 0.8);
+}
+
+/* Промо бейдж */
+.idealson-promo-badge-simple {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: var(--idealson-white);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.idealson-promo-icon-simple {
+  font-size: 16px;
+  animation: simpleRotate 2s linear infinite;
+}
+
+@keyframes simpleRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Кнопки */
+.idealson-btn-simple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 36px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--idealson-font);
+  text-decoration: none;
+  border-radius: var(--idealson-radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  min-width: 240px;
+  transition: var(--idealson-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.idealson-btn-simple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.idealson-btn-simple:hover::before {
+  left: 100%;
+}
+
+.idealson-btn-simple.primary {
+  background: linear-gradient(135deg, var(--idealson-primary) 0%, #2a4a45 100%);
+  color: var(--idealson-white);
+  box-shadow: var(--idealson-shadow);
+}
+
+.idealson-btn-simple.primary:hover {
+  background: linear-gradient(135deg, #4a7570 0%, var(--idealson-primary) 100%);
+  box-shadow: var(--idealson-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.idealson-btn-simple.accent {
+  background: linear-gradient(135deg, var(--idealson-accent) 0%, #87a03c 100%);
+  color: var(--idealson-white);
+  box-shadow: var(--idealson-shadow);
+}
+
+.idealson-btn-simple.accent:hover {
+  background: linear-gradient(135deg, #c4d670 0%, var(--idealson-accent) 100%);
+  box-shadow: var(--idealson-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.idealson-btn-simple.outline {
+  background: transparent;
+  color: var(--idealson-white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.idealson-btn-simple.outline:hover {
+  background: var(--idealson-white);
+  color: var(--idealson-primary);
+  border-color: var(--idealson-white);
+  transform: translateY(-3px);
+}
+
+/* Навигация */
+.idealson-nav-simple {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: 100;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--idealson-shadow);
+}
+
+.idealson-nav-btn-simple {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--idealson-white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--idealson-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.idealson-nav-btn-simple:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.idealson-dots-simple {
+  display: flex;
+  gap: 12px;
+}
+
+.idealson-dot-simple {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--idealson-transition);
+}
+
+.idealson-dot-simple.active {
+  background: var(--idealson-white);
+  border-color: var(--idealson-white);
+  transform: scale(1.2);
+}
+
+.idealson-dot-simple:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+/* Счетчик */
+.idealson-counter-simple {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--idealson-radius);
+  padding: 12px 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--idealson-shadow);
+  color: var(--idealson-white);
+  font-family: var(--idealson-font);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+/* ===========================================
+   АДАПТИВНАЯ ВЕРСТКА
+=========================================== */
+
+@media (max-width: 1024px) {
+  .idealson-simple-grid {
+    gap: 48px;
+  }
+  
+  .idealson-card-simple {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .idealson-simple-hero {
+    min-height: 600px;
+  }
+  
+  .idealson-simple-slide {
+    padding: 24px;
+  }
+  
+  .idealson-simple-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .idealson-image-simple {
+    order: 1;
+    padding: 16px;
+  }
+  
+  .idealson-content-simple {
+    order: 2;
+    padding: 16px;
+  }
+  
+  .idealson-card-simple {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .idealson-btn-simple {
+    font-size: 16px;
+    padding: 14px 28px;
+    min-width: 200px;
+  }
+  
+  .idealson-nav-simple {
+    bottom: 24px;
+    gap: 24px;
+    padding: 12px;
+  }
+  
+  .idealson-nav-btn-simple {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .idealson-counter-simple {
+    top: 24px;
+    right: 24px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .idealson-simple-hero {
+    min-height: 550px;
+  }
+  
+  .idealson-simple-slide {
+    padding: 16px;
+  }
+  
+  .idealson-card-simple {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .idealson-title-simple {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 16px;
+  }
+  
+  .idealson-desc-simple {
+    font-size: clamp(14px, 3vw, 16px);
+    margin-bottom: 24px;
+  }
+  
+  .idealson-btn-simple {
+    font-size: 14px;
+    padding: 12px 24px;
+    min-width: 180px;
+  }
+  
+  .idealson-nav-simple {
+    gap: 16px;
+  }
+  
+  .idealson-nav-btn-simple {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .idealson-dot-simple {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY
+=========================================== */
+
+.idealson-btn-simple:focus,
+.idealson-nav-btn-simple:focus,
+.idealson-dot-simple:focus {
+  outline: 2px solid var(--idealson-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idealson-simple-slide,
+  .idealson-btn-simple,
+  .idealson-nav-btn-simple,
+  .idealson-dot-simple,
+  .idealson-card-simple {
+    transition: none;
+  }
+  
+  .idealson-content-simple {
+    animation: none;
+  }
+  
+  .particle-simple,
+  .idealson-icon-simple,
+  .idealson-promo-icon-simple {
+    animation: none;
+  }
+}
+
+/*
+===========================================
+ПРЕИМУЩЕСТВА ПРОСТОЙ ВЕРСИИ:
+
+✅ НЕТ ЗАВИСИМОСТЕЙ от ACF плагина
+✅ НЕТ НЕОБХОДИМОСТИ в правке functions.php  
+✅ НЕТ СЛОЖНЫХ настроек
+✅ РАБОТАЕТ сразу после импорта
+✅ ВСЕ ЭФФЕКТЫ сохранены
+✅ ПОЛНАЯ АДАПТИВНОСТЬ
+✅ ЛЕГКО РЕДАКТИРОВАТЬ через Elementor
+
+УСТАНОВКА: 
+1. Импорт JSON → 2. Копирование CSS → 3. Готово!
+===========================================
+*/
