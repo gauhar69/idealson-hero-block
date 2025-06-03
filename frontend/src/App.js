@@ -46,14 +46,13 @@ function App() {
     {
       id: 2, 
       title: "Естественная красота — твой выбор",
-      description: "Коллаген работает изнутри: кожа сияет, волосы крепче, ногти не ломаются",
+      description: "Натуральный коллаген работает изнутри: кожа сияет, волосы крепче, ногти не ломаются",
       button: "Выбрать вкус",
       link: "#collagen",
-      bgGradient: "linear-gradient(135deg, #f7f7f7 0%, #ffffff 50%, #f0f4f8 100%), radial-gradient(circle at 20% 80%, rgba(174, 201, 88, 0.08) 0%, transparent 50%)",
+      bgGradient: "linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)",
       buttonClass: "btn-premium-primary",
       isLight: true,
-      accent: "✨",
-      premiumBg: true
+      accent: "✨"
     },
     {
       id: 3,
@@ -61,11 +60,10 @@ function App() {
       description: "Пройдите короткий тест и получите персональную рекомендацию",
       button: "Пройти тест", 
       link: "#quiz-block",
-      bgGradient: "linear-gradient(135deg, #f7f7f7 0%, #ffffff 50%, #e8f2f7 100%), radial-gradient(circle at 30% 70%, rgba(174, 201, 88, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(50, 90, 85, 0.05) 0%, transparent 50%)",
+      bgGradient: "linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%)",
       buttonClass: "btn-premium-accent",
       isLight: true,
-      accent: "🎯",
-      premiumBg: true
+      accent: "🎯"
     },
     {
       id: 4,
@@ -73,7 +71,7 @@ function App() {
       description: offers[selectedOffer].text,
       button: offers[selectedOffer].button,
       link: offers[selectedOffer].link,
-      bgGradient: "linear-gradient(135deg, #aec958 0%, #9bb247 50%, #87a03c 100%)",
+      bgGradient: "linear-gradient(135deg, #b5d063 0%, #9bb247 100%)",
       buttonClass: "btn-premium-outline",
       isPromo: true,
       accent: offers[selectedOffer].icon,
