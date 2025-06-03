@@ -238,7 +238,6 @@ function App() {
                         {slide.isPromo && (
                           <div className="premium-promo-badge">
                             <span className="premium-promo-icon">{slide.accent}</span>
-                            <span className="premium-promo-text">Только с 28 мая по 1 июня</span>
                           </div>
                         )}
                         
