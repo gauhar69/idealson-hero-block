@@ -31,7 +31,7 @@ IDEALSON SIMPLE HERO BLOCK - БЕЗ ACF
 }
 
 /* ===========================================
-   ПРОСТОЙ HERO БЛОК
+   ПРОСТОЙ HERO БЛОК - ПРЕМИУМ ВЕРСИЯ
 =========================================== */
 
 .idealson-simple-hero {
@@ -42,6 +42,21 @@ IDEALSON SIMPLE HERO BLOCK - БЕЗ ACF
   overflow: hidden;
   font-family: var(--idealson-font);
   background: var(--idealson-primary);
+}
+
+/* Премиум оверлеи для светлых слайдов */
+.idealson-premium-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(174, 201, 88, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(50, 90, 85, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Простые частицы */
