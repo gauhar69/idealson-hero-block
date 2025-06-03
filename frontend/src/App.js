@@ -352,12 +352,12 @@ function App() {
         </div>
       </section>
 
-      {/* Premium Product Catalog Demo */}
+      {/* Premium Product Catalog Demo - БЕЗ ACF */}
       <section className="premium-catalog-demo-section">
         <div className="premium-catalog-demo-container">
           <div className="premium-catalog-header">
-            <h3>Демо каталога с ACF promo_text информерами</h3>
-            <p>Примеры отображения промо-информации в карточках товаров</p>
+            <h3>Демо каталога с промо-информерами</h3>
+            <p>Примеры отображения промо-информации в карточках товаров (без ACF)</p>
           </div>
           
           <div className="premium-product-grid">
