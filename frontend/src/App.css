@@ -647,10 +647,7 @@ body {
   background: var(--premium-white);
 }
 
-/* ===========================================
-   PREMIUM NAVIGATION
-=========================================== */
-
+/* Premium Navigation - УЛУЧШЕННАЯ ВИДИМОСТЬ */
 .premium-hero-navigation {
   position: absolute;
   bottom: var(--space-2xl);
@@ -660,20 +657,20 @@ body {
   align-items: center;
   gap: var(--space-xl);
   z-index: 100;
-  padding: var(--space-md);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-full);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 35px;
   backdrop-filter: blur(20px);
-  box-shadow: var(--glass-shadow);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .premium-nav-btn {
   position: relative;
   width: 56px;
   height: 56px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
   color: var(--premium-white);
   border-radius: 50%;
   cursor: pointer;
@@ -682,6 +679,9 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .premium-nav-btn:disabled {
@@ -690,14 +690,15 @@ body {
 }
 
 .premium-nav-btn:not(:disabled):hover {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
+  border-color: var(--premium-white);
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .premium-nav-icon {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 900;
   position: relative;
   z-index: 2;
   transition: transform var(--transition-normal);
@@ -707,39 +708,23 @@ body {
   transform: scale(1.1);
 }
 
-.premium-nav-ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.premium-nav-btn:active .premium-nav-ripple {
-  width: 100px;
-  height: 100px;
-}
-
-/* Premium Dots */
+/* Premium Dots - УВЕЛИЧЕННЫЕ */
 .premium-hero-dots {
   display: flex;
-  gap: var(--space-sm);
+  gap: 16px;
 }
 
 .premium-hero-dot {
   position: relative;
-  width: 12px;
-  height: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
   background: transparent;
   border-radius: 50%;
   cursor: pointer;
   transition: all var(--transition-normal);
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .premium-hero-dot:disabled {
@@ -747,7 +732,7 @@ body {
 }
 
 .premium-hero-dot:not(:disabled):hover {
-  border-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.2);
 }
 
@@ -755,8 +740,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--premium-white);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
@@ -765,27 +750,12 @@ body {
 
 .premium-hero-dot.active {
   border-color: var(--premium-white);
+  transform: scale(1.3);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.4);
 }
 
 .premium-hero-dot.active .premium-dot-inner {
   transform: translate(-50%, -50%) scale(1);
-}
-
-.premium-dot-ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.premium-hero-dot:active .premium-dot-ripple {
-  width: 30px;
-  height: 30px;
 }
 
 /* ===========================================
