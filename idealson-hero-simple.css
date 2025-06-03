@@ -109,7 +109,7 @@ IDEALSON SIMPLE HERO BLOCK - БЕЗ ACF
   margin: 0 auto;
 }
 
-/* Изображения */
+/* Изображения - УВЕЛИЧЕННЫЙ РАЗМЕР */
 .idealson-image-simple {
   display: flex;
   align-items: center;
@@ -119,8 +119,8 @@ IDEALSON SIMPLE HERO BLOCK - БЕЗ ACF
 
 .idealson-card-simple {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   transition: transform var(--idealson-transition);
 }
 
